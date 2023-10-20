@@ -1,0 +1,6 @@
+query SpecyDetailQuery($_eq: Int) {
+    pokemon_v2_ability(where: {id: {_eq: $_eq}}) {
+        name
+        id
+    }
+}

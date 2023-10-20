@@ -1,0 +1,9 @@
+query GetPokemon($offset: Int = 10, $limit: Int = 10, $_regex: String) {
+    pokemon_v2_pokemonspecies(limit: $limit, offset: $offset,where: {name: {_regex: $_regex}},order_by: {id: asc}) {
+        name
+        id
+        pokemon_v2_pokemoncolor {
+            name
+        }
+    }
+}
